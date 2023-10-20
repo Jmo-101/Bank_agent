@@ -42,3 +42,7 @@ Once the Jenkins agent was operational, I created a multibranch pipeline to buil
 
 ### 3rd Instance:
 Next, I needed to deploy the application on the third instance I set up with Terraform earlier. I chose to configure another Jenkins agent with that instance's public IP. After successfully setting up the agent, I needed to find a way to deploy the application on both instances simultaneously. While reviewing the Jenkinsfile, I recalled the Jenkins agent's label and added both Jenkins agents. Upon running the pipeline again in Jenkins, it was successful, and both instances were deployed.
+
+<img width="500" alt="Screenshot 2023-10-18 at 2 52 32 PM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/501c098e-3b16-4830-832b-335992f9668e">
+<img width="500" alt="Screenshot 2023-10-18 at 2 34 55 PM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/93f5013f-7c48-429e-8afb-f6f8fe5177aa">
+
