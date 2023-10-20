@@ -31,7 +31,14 @@ I also created a new Key pair in AWS to attach a private key to all of my instan
 ### Jenkins Agent:
 Once Jenkins was up and running on the first server, I configured a Jenkins agent with the public IP of the application instance, along with configuring the private key in the Jenkins agent to enable SSH access to the server. After configuration, I ensured the agent was up and running to facilitate its functioning.
 
+<img width="500" alt="Screenshot 2023-10-18 at 11 56 08 AM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/0bfb949b-a601-4069-ba18-5038431d4ac9">
+
 Once the Jenkins agent was operational, I created a multibranch pipeline to build, test, and deploy our code and application. The Pipeline was successful, and the application was deployed on our second instance.
+
+<img width="500" alt="Screenshot 2023-10-18 at 12 33 02 PM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/58af79a9-39b3-4b11-9dc9-be43fcdf1c5e">
+
+<img width="500" alt="Screenshot 2023-10-18 at 12 32 11 PM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/e32927b5-1335-472f-aaff-3e6f23fcddc9">
+
 
 ### 3rd Instance:
 Next, I needed to deploy the application on the third instance I set up with Terraform earlier. I chose to configure another Jenkins agent with that instance's public IP. After successfully setting up the agent, I needed to find a way to deploy the application on both instances simultaneously. While reviewing the Jenkinsfile, I recalled the Jenkins agent's label and added both Jenkins agents. Upon running the pipeline again in Jenkins, it was successful, and both instances were deployed.
