@@ -15,12 +15,16 @@ In my `main.tf` file, I configured it so Terraform can automate the building of 
 
 ### EC2 Instances:
 On the EC2 server hosting Jenkins, I installed the following requirements:
-
-- [List of requirements installed on Jenkins EC2 instance]
+ 
+ ```bash
+software-properties-common, sudo add-apt-repository -y ppa:deadsnakes/ppa, python3.7, python3.7-venv}
+```
 
 On the application server EC2s, I installed the following:
 
-- [List of requirements installed on application server EC2 instances]
+```bash
+{default-jre, software-properties-common, sudo add-apt-repository -y ppa:deadsnakes/ppa, python3.7, python3.7-venv}
+```
 
 I also created a new Key pair in AWS to attach a private key to all of my instances. (This will come into play later.)
 
