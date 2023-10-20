@@ -46,3 +46,9 @@ Next, I needed to deploy the application on the third instance I set up with Ter
 <img width="500" alt="Screenshot 2023-10-18 at 2 52 32 PM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/501c098e-3b16-4830-832b-335992f9668e">
 <img width="500" alt="Screenshot 2023-10-18 at 2 34 55 PM" src="https://github.com/Jmo-101/Bank_agent/assets/138607757/93f5013f-7c48-429e-8afb-f6f8fe5177aa">
 
+### Optimization:
+One way I would optimize this infrastructure to make it more available to users would be to add load balancers. My thought process on this is since we have two instances up with the application deployed, we can direct traffic with the load balancers so more users are able to access the application.
+
+### Purpose of Jenkins Agent:
+The purpose of a jenkins agent is it acts as a worker node for the controller server. It offloads the workload from the controller server in the build and deploy stages. It offers scalability purposes as well as more worker nodes can be added to the controller server so more applications can be deployed.
+
